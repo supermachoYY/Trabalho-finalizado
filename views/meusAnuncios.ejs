@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meus Anúncios - ESCAMBO IF</title>
+    <link rel="stylesheet" href="/meusAnuncios.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">ESCAMBO IF</h1>
+            <nav>
+                <a href="/principal">Início</a>
+                <a href="/meusAnuncios">Meus Anúncios</a>
+                <a href="/usuario">Página de usuário</a>
+                <a href="/cadastrarAnuncio" class="botao-anunciar">+ Anunciar</a>
+            </nav>
+        </div>
+    </header>
+    <h1 class="titulo-pagina">Meus Anúncios</h1>
+    <main class="container meus-anuncios-container">
+
+
+        </div>
+
+        <% Anuncio.forEach(function(anuncio) { %>
+            <div class="card-meu-anuncio">
+                <div class="corpo-anuncio">
+                    <h3>
+                        <img src="/<%=anuncio.foto%>" alt="foto do anuncio">
+                    </h3>
+                    <h3>
+                        <%= anuncio.nome %>
+                    </h3>
+                    <p class="preco-anuncio">
+                        <%= 'R$ ' + anuncio.preco %>
+                    </p>
+                    <div class="acoes-anuncio">
+                        <a href="/delanuncio/<%= anuncio.id %>" onclick="return confirmarDelecao(event)"
+                            class="btn-acao btn-excluir">Excluir</a>
+
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - IFSUL ESCAMBOS Anúncios. Todos os direitos reservados.</p>
+    </footer>
+
+
+    </div>
+    </div>
+
+    <script src="/javascript/meusAnuncios.js"></script>
+</body>
+
+</html>

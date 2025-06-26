@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRONT</title>
+    <link rel="stylesheet" href="/usuario.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">ESCAMBO IF</h1>
+            <nav>
+                <a href="/principal">Início</a>
+                <a href="/meusAnuncios">Meus Anúncios</a>
+                <a href="/usuario">Página de usuário</a>
+                <a href="/cadastrarAnuncio" class="botao-anunciar">+ Anunciar</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <main class="grid-anuncios">
+            <div class="card-anuncio">
+                <% usuarios.forEach(function(usuario){%>
+                    <h3>
+                        Nome: <%=usuario.nome%>
+                    </h3>
+                    <p>
+                        Nome usuario: <%=usuario.nomeUsuario%>
+                    </p>
+                    <p>
+                        Data de Nascimento: <%=usuario.nascimento%>
+                    </p>
+                    <p>
+                        Email: <%=usuario.email%>
+                    </p>
+                    <p>
+                        senha: <%=usuario.senha%>
+                    </p>
+                    <p>
+                        cpf: <%=usuario.cpf%>
+                    </p>
+
+                    <a href="/delUsuario/<%=usuario.id %>" onclick="return confirmarDelecao(event)"
+                        class="btn-acao btn-excluir">Excluir</a>
+
+                    <%})%>
+
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 - IFSUL ESCAMBOS Anúncios. Todos os direitos reservados.</p>
+        </footer>
+</body>
+
+</html>

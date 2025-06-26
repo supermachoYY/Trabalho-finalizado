@@ -1,0 +1,166 @@
+:root {
+    --cor1: #0e0036;
+    --cor2: #4c264b;
+    --cor3: #a04f62;
+    --cor-clara: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, var(--cor1), var(--cor2), var(--cor3));
+    color: var(--cor-clara);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Header */
+header {
+    background-color: rgba(14, 0, 54, 0.95);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--cor3);
+    font-weight: bold;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--cor-clara);
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--cor3);
+}
+
+nav .active {
+    text-decoration: underline;
+}
+
+.botao-anunciar {
+    background-color: #e6d7b8;
+    padding: 8px 14px;
+    border-radius: 5px;
+    color: #c05d74;
+    font-weight: bold;
+}
+
+/* Título */
+.titulo-pagina {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+/* Cards */
+.card-meu-anuncio {
+    background-color: rgba(76, 38, 75, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(160, 79, 98, 0.3);
+    transition: transform 0.2s ease;
+
+}
+
+.card-meu-anuncio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px var(--cor3);
+}
+
+
+
+.card-meu-anuncio h3 {
+    color: var(--cor3);
+    margin-top: 0;
+}
+
+.preco-anuncio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-clara);
+}
+
+.acoes-anuncio {
+    margin-top: 15px;
+}
+
+.btn-acao {
+
+    text-decoration: none;
+    padding: 8px 12px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    color: var(--cor-clara);
+    transition: background 0.3s;
+}
+
+.btn-excluir {
+    margin-left: 75px;
+    background-color: #a00000;
+}
+
+.btn-excluir:hover {
+    background-color: #ff0000;
+}
+
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: rgba(76, 38, 75, 0.95);
+    text-align: center;
+    padding: 15px;
+    color: #ccc;
+    margin-top: 40px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .filtros-anuncios {
+        flex-direction: column;
+    }
+
+    .btn-acao {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal-conteudo {
+        padding: 20px 15px;
+    }
+
+    .estrelas-avaliacao label {
+        font-size: 1.8rem;
+    }
+}

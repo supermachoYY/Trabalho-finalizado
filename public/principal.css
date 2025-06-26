@@ -1,0 +1,242 @@
+:root {
+  --cor1: #0e0036;
+  --cor2: #4c264b;
+  --cor3: #a04f62;
+  --cor-clara: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, var(--cor1), var(--cor2), var(--cor3));
+  color: var(--cor-clara);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  color: white;
+
+  background-color: rgba(14, 0, 54, 0.95);
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 2rem;
+  color: var(--cor3);
+  font-weight: bold;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--cor-clara);
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--cor3);
+}
+
+.botao-anunciar {
+  background-color: #e6d7b8;
+  padding: 8px 14px;
+  border-radius: 5px;
+  color: #c05d74;
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filtros input,
+.filtros select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  flex: 1;
+}
+
+/* Grid de Anúncios */
+.grid-anuncios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card-anuncio {
+  background-color: rgba(76, 38, 75, 0.9);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  box-shadow: 0 0 10px rgba(160, 79, 98, 0.3);
+}
+
+.card-anuncio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px var(--cor3);
+}
+
+.card-anuncio img {
+  width: 100%;
+  height: auto;
+}
+
+.card-anuncio h3 {
+  margin: 10px;
+  color: var(--cor3);
+}
+
+.card-anuncio p {
+  margin: 0 10px 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Formulário */
+#formulario {
+  margin-top: 50px;
+}
+
+#formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgba(14, 0, 54, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#formulario input,
+#formulario textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#formulario button {
+  background-color: #e6d7b8;
+  border: none;
+  padding: 10px;
+  color: #a04f62;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#formulario button:hover {
+  background-color: #c05d74;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(76, 38, 75, 0.95);
+  text-align: center;
+  padding: 15px;
+  color: #ccc;
+  margin-top: 40px;
+}
+
+.modal-avaliacao {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: none;
+}
+
+.modal-avaliacao:target {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-conteudo {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.fechar-modal {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 28px;
+  color: #a04f62;
+  text-decoration: none;
+}
+
+.estrelas-avaliacao {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.estrelas-avaliacao input[type="radio"] {
+  display: none;
+}
+
+.estrelas-avaliacao label {
+  font-size: 2rem;
+  color: #ddd;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.estrelas-avaliacao input[type="radio"]:checked~label,
+.estrelas-avaliacao label:hover {
+  color: #FFD700;
+}
+
+.modal-conteudo textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+}
+
+.botao-enviar {
+  background-color: #a04f62;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+}
+
+@media (max-width: 600px) {
+  .modal-conteudo {
+    padding: 20px 15px;
+  }
+
+  .estrelas-avaliacao label {
+    font-size: 1.8rem;
+  }
+}

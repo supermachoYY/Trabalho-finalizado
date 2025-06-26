@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Anúncio - ESCAMBO IF</title>
+    <link rel="stylesheet" href="/principal.css">
+    <link rel="stylesheet" href="/cadastrarAnuncio.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">ESCAMBO IF</h1>
+            <nav>
+                <a href="/principal">Início</a>
+                <a href="/meusAnuncios">Meus Anúncios</a>
+                <a href="/usuario">Página de usuário</a>
+                <a href="/cadastrarAnuncio" class="botao-anunciar">+ Anunciar</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="formulario-container">
+            <h2>Cadastrar Novo Anúncio</h2>
+
+            <form class="formulario-anuncio" method="post" enctype="multipart/form-data">
+                <div class="grupo-campos">
+                    <div class="campo-formulario">
+                        <label for="titulo">Título do Anúncio*</label>
+                        <input name="nome" type="text" id="titulo" required placeholder="Ex: Notebook Dell i7 16GB RAM">
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="categoria">Categoria*</label>
+                        <select name="categoria" id="categoria" required>
+                            <option value="">Selecione uma categoria</option>
+                            <option value="eletronicos">Eletrônicos</option>
+                            <option value="livros">Livros</option>
+                            <option value="moveis">Móveis</option>
+                            <option value="roupas">Roupas</option>
+                            <option value="instrumentos">Instrumentos Musicais</option>
+                            <option value="esportes">Esportes</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grupo-campos">
+                    <div class="campo-formulario">
+                        <label for="preco">Preço (R$)*</label>
+                        <input name="preco" type="number" id="preco" min="0" step="0.01" required
+                            placeholder="Ex: 1200.00">
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="condicao">Condição*</label>
+                        <select name="condicao" id="condicao" required>
+                            <option value="">Selecione</option>
+                            <option value="novo">Novo</option>
+                            <option value="usado">Usado</option>
+                            <option value="recondicionado">Recondicionado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="descricao">Descrição Detalhada*</label>
+                    <textarea name="descricao" id="descricao" required
+                        placeholder="Descreva seu produto com detalhes (marca, modelo, estado de conservação, etc.)"></textarea>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="imagens">Imagens do Produto (Máx. 5)*</label>
+
+                    <label for="imagens" class="campo-imagem" tabindex="0" role="button"
+                        aria-label="Clique para adicionar fotos">
+                        <div class="icone-upload">📷</div>
+                        <p class="texto-upload">Clique para adicionar fotos</p>
+                        <p class="dica-upload">(Formatos: JPG, PNG. Tamanho máx: 5MB cada)</p>
+                    </label>
+
+                    <input name="foto" type="file" id="imagens" accept="image/*" multiple style="display: none;">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="contato">Contato*</label>
+                    <input name="contato" type="text" id="contato" required placeholder="WhatsApp, email ou telefone">
+                </div>
+
+                <button onclick="window.location.href='/meusAnuncios'" type="submit" class="botao-enviar">Publicar
+                    Anúncio</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - IFSUL ESCAMBOS Anúncios. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

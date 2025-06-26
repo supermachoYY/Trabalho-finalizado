@@ -1,0 +1,202 @@
+:root {
+    --cor1: #0e0036;
+    --cor2: #4c264b;
+    --cor3: #a04f62;
+    --cor-clara: #ffffff;
+    --cor-destaque: #e6d7b8;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, var(--cor1), var(--cor2), var(--cor3));
+    color: var(--cor-clara);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: rgba(14, 0, 54, 0.95);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--cor3);
+    font-weight: bold;
+    margin-left: 39%;
+
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--cor-clara);
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--cor3);
+}
+
+.botao-anunciar {
+    background-color: var(--cor-destaque);
+    padding: 8px 14px;
+    border-radius: 5px;
+    color: var(--cor3);
+    transition: all 0.3s;
+}
+
+.botao-anunciar:hover {
+    background-color: var(--cor3);
+    color: var(--cor-destaque);
+}
+
+/* Container de Login */
+.login-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(76, 38, 75, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(160, 79, 98, 0.4);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--cor-destaque);
+    font-size: 2rem;
+}
+
+/* Formulário de Login */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--cor-destaque);
+}
+
+.login-form input {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.login-form button {
+    background-color: var(--cor-destaque);
+    color: var(--cor3);
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.login-form button:hover {
+    background-color: var(--cor3);
+    color: var(--cor-destaque);
+}
+
+/* Opções de Login */
+.login-options {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--cor-destaque);
+}
+
+.login-options a {
+    color: var(--cor-clara);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-options a:hover {
+    color: var(--cor-destaque);
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(76, 38, 75, 0.95);
+    text-align: center;
+    padding: 15px;
+    color: #ccc;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .login-container {
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    nav a {
+        margin: 0 10px 0 0;
+    }
+}
+
+/* Estilos específicos para a página de e-mail enviado */
+.email-enviado-page .login-container {
+    text-align: center;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.email-enviado-page .form-group p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .email-enviado-page .login-container {
+        margin: 20px;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,167 @@
+/* Mantendo a paleta de cores existente */
+:root {
+    --cor1: #0e0036;
+    --cor2: #4c264b;
+    --cor3: #a04f62;
+    --cor-clara: #ffffff;
+    --cor-fundo: rgba(255, 255, 255, 0.95);
+}
+
+.formulario-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background: var(--cor-fundo);
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(76, 38, 75, 0.1);
+}
+
+.formulario-container h2 {
+    color: var(--cor1);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.grupo-campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.campo-formulario {
+    margin-bottom: 30px;
+}
+
+.campo-formulario label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: var(--cor2);
+    font-size: 1.05rem;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid rgba(76, 38, 75, 0.2);
+    border-radius: 8px;
+    font-size: 1.05rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+    border-color: var(--cor3);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(160, 79, 98, 0.2);
+}
+
+.campo-formulario input::placeholder,
+.campo-formulario textarea::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+.campo-formulario textarea {
+    height: 140px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.campo-imagem {
+    border: 2px dashed var(--cor2);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.campo-imagem:hover {
+    border-color: var(--cor3);
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+.icone-upload {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--cor2);
+}
+
+.texto-upload {
+    color: var(--cor2);
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.dica-upload {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.botao-enviar {
+    background-color: var(--cor3);
+    color: var(--cor-clara);
+    border: none;
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto 0;
+    transition: all 0.3s;
+    width: 100%;
+    max-width: 300px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.botao-enviar:hover {
+    background-color: #8a4255;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(160, 79, 98, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .grupo-campos {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario-container {
+        padding: 30px 20px;
+        margin: 30px auto;
+    }
+
+    .campo-formulario {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .formulario-container {
+        padding: 25px 15px;
+    }
+
+    .campo-formulario input,
+    .campo-formulario select,
+    .campo-formulario textarea {
+        padding: 12px;
+    }
+
+    .botao-enviar {
+        padding: 14px 30px;
+    }
+}

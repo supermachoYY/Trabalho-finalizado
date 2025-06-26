@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRONT</title>
+    <link rel="stylesheet" href="/principal.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">ESCAMBO IF</h1>
+            <nav>
+                <a href="/principal">Início</a>
+                <a href="/meusAnuncios">Meus Anúncios</a>
+                <a href="/usuario">Página de usuário</a>
+                <a href="/cadastrarAnuncio" class="botao-anunciar">+ Anunciar</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- BARRA DE BUSCA E FILTROS -->
+        <section class="filtros">
+            <input type="text" placeholder="Buscar anúncios..." id="busca" />
+            <select id="filtro-preco">
+                <option value="">Faixa de preço</option>
+                <option value="0-100">Até R$ 100</option>
+                <option value="101-500">R$ 101 a R$ 500</option>
+                <option value="501-1000">R$ 501 a R$ 1.000</option>
+                <option value="1001-99999">Acima de R$ 1.000</option>
+            </select>
+        </section>
+
+        <!-- ANÚNCIOS -->
+        <h2>Anúncios Recentes</h2>
+        <div class="grid-anuncios">
+            <!-- Anúncio 1 -->
+            <div class="card-anuncio" data-preco="900">
+                <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80"
+                    alt="Smartphone" />
+                <h3>Smartphone Samsung Galaxy S21</h3>
+                <p>R$ 900</p>
+            </div>
+
+            <!-- Anúncio 2 -->
+            <div class="card-anuncio" data-preco="450">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80"
+                    alt="Sofá" />
+                <h3>Sofá Retrátil 3 Lugares</h3>
+                <p>R$ 450</p>
+            </div>
+
+            <!-- Anúncio 4 -->
+            <div class="card-anuncio" data-preco="1200">
+                <img src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80"
+                    alt="Xbox" />
+                <h3>Xbox One S 1TB</h3>
+                <p>R$ 1.200</p>
+            </div>
+
+            <!-- Anúncio 5 -->
+            <div class="card-anuncio" data-preco="80">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80"
+                    alt="Livros" />
+                <h3>Coleção 10 Livros de Romance</h3>
+                <p>R$ 80</p>
+            </div>
+
+            <!-- Anúncio 6 -->
+            <div class="card-anuncio" data-preco="2500">
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80"
+                    alt="Notebook" />
+                <h3>Notebook Gamer Acer Nitro 5</h3>
+                <p>R$ 2.500</p>
+            </div>
+
+            <!-- Anúncio 7 (Novo) -->
+            <div class="card-anuncio" data-preco="350">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80"
+                    alt="Relógio" />
+                <h3>Relógio Smartwatch Amazfit</h3>
+                <p>R$ 350</p>
+            </div>
+
+            <!-- Anúncio 8 (Novo) -->
+            <div class="card-anuncio" data-preco="600">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80"
+                    alt="Fones de Ouvido" />
+                <h3>Fone Bluetooth Sony WH-CH510</h3>
+                <p>R$ 600</p>
+            </div>
+
+            <!-- Anúncio 9 (Novo) -->
+            <div class="card-anuncio" data-preco="120">
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80"
+                    alt="Óculos" />
+                <h3>Óculos de Sol Ray-Ban</h3>
+                <p>R$ 120</p>
+            </div>
+
+            <!-- Anúncio 10 (Novo) -->
+            <div class="card-anuncio" data-preco="1800">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80"
+                    alt="Tênis" />
+                <h3>Tênis Nike Air Max 270</h3>
+                <p>R$ 1.800</p>
+            </div>
+
+            <!-- Anúncio 11 (Novo) -->
+            <div class="card-anuncio" data-preco="750">
+                <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80"
+                    alt="Mochila" />
+                <h3>Mochila Notebook Dell Premium</h3>
+                <p>R$ 750</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - IFSUL ESCAMBOS Anúncios. Todos os direitos reservados.</p>
+    </footer>
+    <script src="/javascript/principal.js"></script>
+</body>
+
+</html>
